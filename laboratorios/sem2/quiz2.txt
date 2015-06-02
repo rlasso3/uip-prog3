@@ -1,0 +1,11 @@
+Explique cuales son los modos de programacio en Python.
+
+Modo interactivo
+ - utiliza una interfaz de comando
+ - Respeta el tabulador de codigo
+ - la ejecucion de sentencia anterior se almacena en memoria 
+
+Modo Tradicional o Normal 
+ - utiliza un editor de texto y el interprete de comando 
+ - ejecuta los archivos con exteccion .py 
+ - debe ser archivo extructurado y terminados 
