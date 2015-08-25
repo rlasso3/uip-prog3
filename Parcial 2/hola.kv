@@ -1,0 +1,50 @@
+#:import WipeTransition kivy.uix.screenmanager.WipeTransition
+
+ScreenManager:
+	Screen:
+		name: 'inicio'
+		BoxLayout:
+			orientation: 'vertical'
+			Label:
+				text:'Introduzca Su Nombre'
+				font_size:'50dp'
+			GridLayout:
+				cols: 1
+				BoxLayout:
+					Button:
+						text: 'Enviar'
+						font_size: '25dp'
+						on_press: root.current = 'hola'
+					TextInput:
+						id: text_input
+						on_text: vista.text = 'Hola, ' + self.text
+						multiline: False
+
+
+	Screen:
+		name: 'hola'
+		BoxLayout:
+			orientation: 'vertical'
+
+			BoxLayout:
+				padding: [20, 150, 20, 95]
+				cols: 2
+				rows: None
+				Label:
+					id: vista
+					text: ''
+					font_size: '40dp'
+
+			GridLayout:
+				cols: 5
+				rows: None
+				padding: [0, 0, 0, 225]
+				Label:
+					size_hint: (0.4, 1)
+				Button:
+					size_hint: (0.2,1)
+					text: 'Volver'
+					font_size: '25dp'
+					on_press: root.current = 'inicio'
+				Label:
+					size_hint: (0.4, 1)
